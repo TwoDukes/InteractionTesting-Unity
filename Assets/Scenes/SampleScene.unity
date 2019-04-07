@@ -692,6 +692,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b072be30f5d5f0d4e9c232b7917df70e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1300399613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1874786466978926390, guid: c6da8613a0bcfbf45a9532e32e2547cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3549578100223572101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1300399616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300399613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdf09ff21f6a6d4688dd5a99fc68680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainWireColor: {r: 1, g: 0, b: 0, a: 1}
+  switchWireColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1320988491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1302,7 +1322,7 @@ PrefabInstance:
     - target: {fileID: 3118239312265540567, guid: e0a2c5415a3494e4799493f52cae099b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.022
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 3118239312265540567, guid: e0a2c5415a3494e4799493f52cae099b,
         type: 3}
@@ -1312,7 +1332,7 @@ PrefabInstance:
     - target: {fileID: 3118239312265540567, guid: e0a2c5415a3494e4799493f52cae099b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.572
+      value: -6.21
       objectReference: {fileID: 0}
     - target: {fileID: 3118239312265540567, guid: e0a2c5415a3494e4799493f52cae099b,
         type: 3}
@@ -1549,6 +1569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Elevator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549578099502468410, guid: c6da8613a0bcfbf45a9532e32e2547cb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3549578099502468421, guid: c6da8613a0bcfbf45a9532e32e2547cb,
         type: 3}

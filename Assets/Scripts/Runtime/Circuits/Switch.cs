@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
-[ExecuteInEditMode]
+[RequireComponent(typeof(SwitchWires))]
 public class Switch : Circuit
 {
     [Space]
@@ -33,16 +33,4 @@ public class Switch : Circuit
         }
         ++eventIterator;
     }
-
-    //private void OnDrawGizmos()
-    //{
-    //    Handles.color = Color.red;
-    //    eventCount = events.GetPersistentEventCount();
-    //    for(int i = 0; i < eventCount; i++)
-    //    {
-    //        Component component = (Component)events.GetPersistentTarget(i);
-    //        Transform tr = component.transform;
-    //        Handles.DrawLine(tr.position, transform.position);
-    //    }
-    //}
 }

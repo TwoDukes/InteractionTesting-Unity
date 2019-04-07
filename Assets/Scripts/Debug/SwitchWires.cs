@@ -5,9 +5,10 @@ using UnityEditor;
 using UnityEngine.Events;
 
 [ExecuteInEditMode]
+[RequireComponent(typeof(Switch))]
 public class SwitchWires : MonoBehaviour
 {
-    public Color mainWireColor, switchWireColor;
+    public Color mainWireColor = Color.red, switchWireColor = Color.green;
 
     private Switch _switch;
     private int mainEventCount;
@@ -19,6 +20,8 @@ public class SwitchWires : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (!_switch) return;
+
         Handles.color = mainWireColor;
         mainEventCount = _switch.events.GetPersistentEventCount();
         for (int i = 0; i < mainEventCount; i++)
