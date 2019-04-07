@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-//[RequireComponent(typeof(RepeatingCircuitWires))]
+[RequireComponent(typeof(RepeatingCircuitWires))]
 public class RepeatingCircuit : Circuit
 {
     [SerializeField]

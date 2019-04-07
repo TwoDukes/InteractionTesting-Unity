@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEditor;
 
 [CustomEditor(typeof(ButtonCircuit))]
-public class CircutCustomEditor : Editor
+public class ButtonCustomEditor : Editor
 {
     public override void OnInspectorGUI()
     {
