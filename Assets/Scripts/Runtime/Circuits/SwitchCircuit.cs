@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
-//[RequireComponent(typeof(SwitchWires))]
+[RequireComponent(typeof(SwitchWires))]
 public class SwitchCircuit : Circuit
 {
     [Header("Events Every Activation")]
