@@ -5,8 +5,14 @@ using UnityEngine.Events;
 public class ButtonCircuit : Circuit
 {
     [Header("Events Every Activation")]
+    [SerializeField]
     [Tooltip("These methods are called everytime this circuit is activated")]
-    public UnityEvent events;
+    private UnityEvent events;
+
+    public UnityEvent GetEvents()
+    {
+        return events;
+    }
 
     public override void Activate()
     {

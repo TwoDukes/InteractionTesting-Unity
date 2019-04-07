@@ -8,14 +8,24 @@ public class SwitchCircuit : Circuit
 {
     [Header("Events Every Activation")]
     [Tooltip("These methods are called everytime this circuit is activated")]
-    public UnityEvent events;
+    private UnityEvent mainEvents;
 
     [Space]
 
     [Header("Cycling Events")]
     [SerializeField]
     [Tooltip("Each set of events will trigger in order per activation and then cycle")]
-    public List<UnityEvent> eventList;
+    private List<UnityEvent> eventList;
+
+    public UnityEvent GetMainEvents()
+    {
+        return mainEvents;
+    }
+
+    public List<UnityEvent> GetEventList()
+    {
+        return eventList;
+    }
 
     private int eventIterator = 0;
 
@@ -29,7 +39,7 @@ public class SwitchCircuit : Circuit
 
     public override void Activate()
     {
-        events.Invoke();
+        mainEvents.Invoke();
         eventList[eventIterator].Invoke();
         if(eventIterator + 1 == eventList.Count)
         {

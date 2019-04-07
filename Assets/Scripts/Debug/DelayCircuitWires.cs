@@ -4,18 +4,16 @@ using UnityEngine;
 using UnityEditor;
 
 [ExecuteInEditMode]
-[RequireComponent(typeof(ButtonCircuit))]
-public class ButtonWires : MonoBehaviour
+public class DelayCircuitWires : MonoBehaviour
 {
-
     public Color wireColor = Color.red;
 
-    private ButtonCircuit circuit;
+    private DelayCircuit circuit;
     private int eventCount;
 
     private void Awake()
     {
-        circuit = GetComponent<ButtonCircuit>();
+        circuit = GetComponent<DelayCircuit>();
     }
 
     private void OnDrawGizmos()

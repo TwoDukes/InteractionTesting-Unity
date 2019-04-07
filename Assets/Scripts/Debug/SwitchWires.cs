@@ -23,10 +23,10 @@ public class SwitchWires : MonoBehaviour
         if (!_switch) return;
 
         Handles.color = mainWireColor;
-        mainEventCount = _switch.events.GetPersistentEventCount();
+        mainEventCount = _switch.GetMainEvents().GetPersistentEventCount();
         for (int i = 0; i < mainEventCount; i++)
         {
-            Component component = _switch.events.GetPersistentTarget(i) as Component;
+            Component component = _switch.GetMainEvents().GetPersistentTarget(i) as Component;
             if (!component) continue;
             Transform tr = component.transform;
             Handles.DrawLine(tr.position, transform.position);
@@ -34,9 +34,9 @@ public class SwitchWires : MonoBehaviour
         }
 
         Handles.color = switchWireColor;
-        for (int i = 0; i < _switch.eventList.Count; i++)
+        for (int i = 0; i < _switch.GetEventList().Count; i++)
         {
-            UnityEvent curEvent = _switch.eventList[i];
+            UnityEvent curEvent = _switch.GetEventList()[i];
             int curEventCount = curEvent.GetPersistentEventCount();
             for (int j = 0; j < curEventCount; j++)
             {
