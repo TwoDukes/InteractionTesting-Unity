@@ -27,7 +27,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             if (curInteractable)
             {
-                curInteractable.InvokeEvents();
+                curInteractable.Activate();
             }
         }
     }

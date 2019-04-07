@@ -7,12 +7,12 @@ public class SwitchCustomEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
-
-        Switch myScript = (Switch)target;
-        if (GUILayout.Button("Invoke Events"))
+        Circuit myScript = (Circuit)target;
+        if (GUILayout.Button("Activate"))
         {
-            myScript.InvokeEvents();
+            myScript.Activate();
         }
+
+        DrawDefaultInspector();
     }
 }
