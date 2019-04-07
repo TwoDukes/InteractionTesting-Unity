@@ -5,17 +5,17 @@ using UnityEditor;
 using UnityEngine.Events;
 
 [ExecuteInEditMode]
-[RequireComponent(typeof(Switch))]
+[RequireComponent(typeof(SwitchCircuit))]
 public class SwitchWires : MonoBehaviour
 {
     public Color mainWireColor = Color.red, switchWireColor = Color.green;
 
-    private Switch _switch;
+    private SwitchCircuit _switch;
     private int mainEventCount;
 
     private void Awake()
     {
-        _switch = GetComponent<Switch>();
+        _switch = GetComponent<SwitchCircuit>();
     }
 
     private void OnDrawGizmos()

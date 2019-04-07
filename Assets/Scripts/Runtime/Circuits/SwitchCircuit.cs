@@ -3,10 +3,15 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(SwitchWires))]
-public class Switch : Circuit
+//[RequireComponent(typeof(SwitchWires))]
+public class SwitchCircuit : Circuit
 {
+    [Header("Events Every Activation")]
+    [Tooltip("These methods are called everytime this circuit is activated")]
+    public UnityEvent events;
+
     [Space]
+
     [Header("Cycling Events")]
     [SerializeField]
     [Tooltip("Each set of events will trigger in order per activation and then cycle")]

@@ -2,12 +2,12 @@
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(Switch))]
+[CustomEditor(typeof(SwitchCircuit))]
 public class SwitchCustomEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        Circuit myScript = (Circuit)target;
+        SwitchCircuit myScript = (SwitchCircuit)target;
         if (GUILayout.Button("Activate"))
         {
             myScript.Activate();

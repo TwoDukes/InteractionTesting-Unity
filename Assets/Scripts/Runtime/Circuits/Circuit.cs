@@ -1,14 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Circuit : MonoBehaviour
+public abstract class Circuit : MonoBehaviour
 {
-    [Header("Events Every Activation")]
-    [Tooltip("These methods are called everytime this circuit is activated")]
-    public UnityEvent events;
-
-    public virtual void Activate()
-    {
-        events.Invoke();
-    }
+    public abstract void Activate();
 }
