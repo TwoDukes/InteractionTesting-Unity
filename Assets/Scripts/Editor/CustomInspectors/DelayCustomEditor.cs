@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(SwitchCircuit))]
-public class SwitchCustomEditor : Editor
+[CustomEditor(typeof(DelayCircuit))]
+public class DelayCustomEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        SwitchCircuit myScript = (SwitchCircuit)target;
+        DelayCircuit myScript = (DelayCircuit)target;
         if (GUILayout.Button("Activate"))
         {
             myScript.Activate();

@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(SwitchCircuit))]
-public class SwitchCustomEditor : Editor
+[CustomEditor(typeof(RepeatingCircuit))]
+public class RepeatingCustomEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        SwitchCircuit myScript = (SwitchCircuit)target;
+        RepeatingCircuit myScript = (RepeatingCircuit)target;
         if (GUILayout.Button("Activate"))
         {
             myScript.Activate();
