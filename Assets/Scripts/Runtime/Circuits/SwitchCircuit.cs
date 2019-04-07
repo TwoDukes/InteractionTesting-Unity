@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class SwitchCircuit : Circuit
 {
     [Header("Events Every Activation")]
+    [SerializeField]
     [Tooltip("These methods are called everytime this circuit is activated")]
     private UnityEvent mainEvents;
 

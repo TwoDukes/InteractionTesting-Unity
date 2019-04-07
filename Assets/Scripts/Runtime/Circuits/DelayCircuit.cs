@@ -17,6 +17,11 @@ public class DelayCircuit : Circuit
         return events;
     }
 
+    public float GetDelay()
+    {
+        return delay;
+    }
+
     public override void Activate()
     {
         StartCoroutine(ActivateAfterDelay());

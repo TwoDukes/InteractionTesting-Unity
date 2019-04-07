@@ -4,23 +4,25 @@ using UnityEngine;
 using UnityEditor;
 
 [ExecuteInEditMode]
-public class DelayCircuitWires : MonoBehaviour
+public class RepeatingCircuitWires : MonoBehaviour
 {
-    public Color wireColor = Color.yellow;
+    public Color activeWireColor = Color.green, disabledWireColor = Color.magenta;
 
-    private DelayCircuit circuit;
+    private RepeatingCircuit circuit;
     private int eventCount;
 
     private void Awake()
     {
-        circuit = GetComponent<DelayCircuit>();
+        circuit = GetComponent<RepeatingCircuit>();
     }
 
     private void OnDrawGizmos()
     {
         if (!circuit) return;
 
-        Handles.color = wireColor;
+        if(circuit.IsCurrentlyActive()) Handles.color = activeWireColor;
+        else Handles.color = disabledWireColor;
+
         eventCount = circuit.GetEvents().GetPersistentEventCount();
         for (int i = 0; i < eventCount; i++)
         {
