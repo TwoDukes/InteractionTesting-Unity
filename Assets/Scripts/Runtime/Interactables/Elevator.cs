@@ -9,7 +9,6 @@ public class Elevator : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    private Rigidbody rb;
     private Vector3 curTarget;
 
     private void Awake()
