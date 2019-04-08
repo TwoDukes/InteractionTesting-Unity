@@ -25,10 +25,28 @@ public class DelayCircuitWires : MonoBehaviour
         for (int i = 0; i < eventCount; i++)
         {
             Component component = circuit.GetEvents().GetPersistentTarget(i) as Component;
-            if (!component) continue;
-            Transform tr = component.transform;
-            Handles.DrawLine(tr.position, transform.position);
-            Handles.Label(transform.position, circuit.GetDelay() + "s");
+            if (!component)
+            {
+                GameObject go = circuit.GetEvents().GetPersistentTarget(i) as GameObject;
+                DrawGOLine(go);
+                return;
+            }
+            DrawCompLine(component);
+
         }
+    }
+
+    void DrawGOLine(GameObject component)
+    {
+        Transform tr = component.transform;
+        Handles.DrawLine(tr.position, transform.position);
+        Handles.Label(transform.position, circuit.GetDelay() + "s");
+    }
+
+    void DrawCompLine(Component component)
+    {
+        Transform tr = component.transform;
+        Handles.DrawLine(tr.position, transform.position);
+        Handles.Label(transform.position, circuit.GetDelay() + "s");
     }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
-    private SwitchCircuit curInteractable = null;
+    private Circuit curInteractable = null;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Interactable")
         {
-            curInteractable = other.gameObject.GetComponent<SwitchCircuit>();
+            curInteractable = other.gameObject.GetComponent<Circuit>();
         }
     }
     private void OnTriggerExit(Collider other)
